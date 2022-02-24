@@ -61,10 +61,10 @@ func New(c *Checker) *Checker {
 		c.History.AddChecker(c)
 	}
 	if c.MaxRetries == 0 {
-		c.MaxRetries = 3
+		c.MaxRetries = 1
 	}
 	if c.RetryInterval == 0 {
-		c.RetryInterval = 1 * time.Minute
+		c.RetryInterval = 10 * time.Second
 	}
 	return c
 }
