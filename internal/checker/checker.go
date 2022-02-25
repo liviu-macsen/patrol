@@ -64,7 +64,7 @@ func New(c *Checker) *Checker {
 		c.MaxRetries = 1
 	}
 	if c.RetryInterval == 0 {
-		c.RetryInterval = 10 * time.Second
+		c.RetryInterval = 5 * time.Second
 	}
 	return c
 }
